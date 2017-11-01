@@ -45,7 +45,7 @@ def RunFlake8():
     sys.executable,
     # __main__ is required on Python 2.6.
     '-m', 'flake8.__main__',
-    p.join( DIR_OF_THIS_SCRIPT, 'ycmd' )
+    p.join( DIR_OF_THIS_SCRIPT, 'ycmd/' )
   ] )
 
 
@@ -84,6 +84,11 @@ COMPLETERS = {
     'build': [],
     'test': [ '--exclude-dir=ycmd/tests/python' ],
     'aliases': [ 'jedi', 'jedihttp', ]
+  },
+  'tex': {
+    'build': [],
+    'test': [ '--exclude-dir=ycmd/tests/tex' ],
+    'aliases': []
   },
 }
 
